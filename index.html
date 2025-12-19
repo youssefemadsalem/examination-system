@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examination Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Examination Portal</span>
+        </div>
+        <button class="logout-button">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
+    </div>
+    <div class="content">
+        <div class="welcome-message">
+            <h1>Welcome, ahmed hatem!</h1>
+            <p>You are ready to begin your examination</p>
+        </div>
+        <div class="exam-info">
+            <h2>Exam Information</h2>
+            <div class="exam-details">
+                <div class="info-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-check-to-slot"></i>
+                    </div>
+                    <span class="info-value">10 Questions</span>
+                    <span class="info-label">Multiple Choice</span>
+                </div>
+                <div class="info-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <span class="info-value">5 Minutes</span>
+                    <span class="info-label">Time Limit</span>
+                </div>
+                <div class="info-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span class="info-value">50% to Pass</span>
+                    <span class="info-label">Passing Score</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="instructions">
+        <h2>Instructions</h2>
+        <ul>
+            <li>The exam consists of 10 multiple-choice questions covering various topics.</li>
+            <li>You have 5 minutes to complete the exam. A timer will be displayed at the top of the page.</li>
+            <li>Questions are presented in random order for each student.</li>
+            <li>You can navigate between questions using the Previous and Next buttons.</li>
+            <li>You must answer all questions before you can submit the exam.</li>
+            <li>If time runs out before submission, the exam will be automatically terminated.</li>
+            <li>You need to score at least 50% to pass the examination.</li>
+        </ul>
+    </div>
+    <div class="notes">
+        <h3>⚠️ Important Notes</h3>
+        <ul>
+            <li>Make sure you have a stable internet connection.</li>
+            <li>Do not refresh or close the browser during the exam.</li>
+            <li>Once you start, the timer cannot be paused.</li>
+            <li>Submit your answers before the time runs out.</li>
+        </ul>
+    </div>
+    <div class="start-exam">
+        <button class="start-button">
+            Start Examination
+        </button>
+        <span>Click the button above when you're ready to begin</span>
+    </div>
+</body>
+</html>
