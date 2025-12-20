@@ -7,6 +7,10 @@
 
 body {
     background-color: #e7e7f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-container {
@@ -16,7 +20,7 @@ body {
     /*border: 1px solid #ccc;*/
     border-radius: 15px;
     background-color: white;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
 }
 
 .header {

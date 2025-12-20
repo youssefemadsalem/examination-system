@@ -9,8 +9,12 @@ var Auth = (function() {
     }
 
     function logout(){
-        Storage.clearSession()
-        window.location.href = '../pages/login.html';
+        Storage.clearSession();
+        if (window.location.pathname.includes('/pages/')) {
+            window.location.href = 'login.html';
+        } else {
+            window.location.href = 'pages/login.html';
+        }
     }
 
     function getCurrentUser() {
@@ -30,6 +34,7 @@ var Auth = (function() {
         isLoggedIn: isLoggedIn,
         requireLogin: requireLogin,
         logout: logout,
+        login: login,
         getCurrentUser: getCurrentUser
     };
 })();

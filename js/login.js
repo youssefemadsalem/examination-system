@@ -1,3 +1,8 @@
+// If user is already logged in, redirect to home page
+if (Auth.isLoggedIn()) {
+    window.location.href = '../index.html';
+}
+
 var emailInput = document.getElementById('email');
 var loginBtn = document.getElementById('loginBtn');
 var emailError = document.getElementById('emailError');
@@ -48,7 +53,8 @@ loginBtn.addEventListener('click', function (e) {
     }
 
     if (isValid) {
-        var storedUser = JSON.parse(localStorage.getItem('user'));
+        var storedUser = Auth.getCurrentUser();
+        console.log(storedUser);
 
         if (!storedUser) {
             showError(emailInput, emailError, 'No account found. Please register first');
@@ -59,7 +65,8 @@ loginBtn.addEventListener('click', function (e) {
             emailInput.value.trim() === storedUser.email &&
             passwordInput.value === storedUser.password
         ) {
-            // Login success
+            // Login success - set session as logged in
+            Auth.login();
             window.location.href = '../index.html';
         } else {
             showError(passwordInput, passwordError, 'Email or password is incorrect');
