@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e7e7f8;
+}
+
+.registration-container {
+    width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    /*border: 1px solid #ccc;*/
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.header h2 {
+    margin: 10px 20px 10px 20px;
+    font-size: 38px;
+    color: #333;
+}
+
+.header p {
+    font-size: 20px;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #555;
+    font-weight: 500;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 22px;
+    margin-bottom: 22px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+input::placeholder {
+    color: #aaa;
+    font-size: 20px;
+}
+
+button {
+    padding: 22px;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+}
+
+/* Input validation states */
+input.error {
+    border: 2px solid #ef4444;
+    background-color: #fef2f2;
+}
+
+input.success {
+    border: 2px solid #22c55e;
+    background-color: #f0fdf4;
+}
+
+/* Error message text */
+.error-message {
+    color: #ef4444;
+    font-size: 18px;
+    margin-top: -12px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+    font-size: 22px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #4b4bdd;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
