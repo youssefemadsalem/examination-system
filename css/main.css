@@ -272,3 +272,9 @@ body {
   background-color: #3a3a9d;
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  .exam-details {
+    flex-direction: column;
+  }
+}

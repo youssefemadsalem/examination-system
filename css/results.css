@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #e7e7f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-container {
+  width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.examicon {
+  width: 79px;
+  height: 79px;
+  background-color: rgb(251, 202, 202);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.examicon svg {
+  color: red;
+  width: 50px;
+  height: 50px;
+}
+
+h3 {
+  font-size: 2rem;
+}
+p {
+  color: oklch(37.3% 0.034 259.733);
+  font-size: 1rem;
+}
+
+.score-container {
+  width: 80%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  background-color: #e2e8fe;
+}
+
+.score-container p {
+  font-size: 1.175rem;
+}
+
+.score-container h3 {
+  font-size: 1.7rem;
+}
+
+.answers-contianer {
+  text-align: center;
+  width: 80%;
+  display: flex;
+  gap: 30px;
+}
+
+.correct-answers {
+  width: 50%;
+  background-color: rgb(203, 255, 203);
+  border: solid green 1px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.wrong-answers {
+  width: 50%;
+  background-color: rgb(255, 185, 185);
+  border: solid red 1px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.try-again {
+  width: 80%;
+  background-color: rgb(255, 237, 163);
+  border: solid rgb(193, 193, 1) 1px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.back-button {
+  background-color: #4b4bdd;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 5px 15px rgba(75, 75, 221, 0.3);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 670px) {
+  .score-container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .answers-contianer {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+  }
+}
