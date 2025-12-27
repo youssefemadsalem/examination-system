@@ -27,11 +27,11 @@
         <div class="timer-header">
           <div class="top">
             <h1>Welcome, <span></span></h1>
-            <p>Question <span id="solved-count">1</span> of <span class="total-questions">10</span></p>
+            <p>Question <span id="question-number">1</span> of <span id="total-questions">10</span></p>
           </div>
           <div class="right-side">
             <div class="answered-count">
-                <span>Answered <span id="question-number">0</span> / <span class="total-questions">10</span> </span>
+                <div>Answered <span><span id="solved-count">0</span> / <span id="all-questions">10</span></span> </div>
             </div>
             <div class="time-remaining">
               <i class="fa-solid fa-clock"></i>
@@ -90,34 +90,71 @@
           </div>
         </div>
         <div class="options-list">
-          <div class="option">
-            <input type="radio" id="option1" name="question1" value="A" />
-            <label for="option1">Berlin</label>
-          </div>
-          <div class="option">
-            <input type="radio" id="option2" name="question1" value="B" />
-            <label for="option2">Madrid</label>
-          </div>
-          <div class="option">
-            <input type="radio" id="option3" name="question1" value="C" />
-            <label for="option3">Paris</label>
-          </div>
-          <div class="option">
-            <input type="radio" id="option4" name="question1" value="D" />
-            <label for="option4">Rome</label>
-          </div>
+          <!-- Options will be generated dynamically -->
         </div>
         <div class="action-buttons">
           <div id="prev-btn">
             <button>
               <i class="fa-solid fa-arrow-left"></i>
+              <span>Previous</span>
+            </button>
+          </div>
+          <div id="submit-btn">
+            <button>
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Submit Exam</span>
             </button>
           </div>
           <div id="next-btn">
             <button>
+              <span>Next</span>
               <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="submit-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <i class="fa-solid fa-exclamation-triangle"></i>
+          <h2>Submit Exam?</h2>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to submit your exam?</p>
+          <div class="exam-summary">
+            <p><strong>Answered:</strong> <span id="modal-answered">0</span> questions</p>
+            <p><strong>Unanswered:</strong> <span id="modal-unanswered">0</span> questions</p>
+            <p><strong>Marked for review:</strong> <span id="modal-marked">0</span> questions</p>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button id="cancel-submit" class="btn-cancel">
+            <i class="fa-solid fa-times"></i> Cancel
+          </button>
+          <button id="confirm-submit" class="btn-confirm">
+            <i class="fa-solid fa-check"></i> Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Warning Modal for leaving page -->
+    <div id="warning-modal" class="modal hidden">
+      <div class="modal-content warning">
+        <div class="modal-header">
+          <i class="fa-solid fa-exclamation-circle"></i>
+          <h2>Warning!</h2>
+        </div>
+        <div class="modal-body">
+          <p>You cannot leave the exam page. Your progress will be lost if you try to navigate away.</p>
+        </div>
+        <div class="modal-actions">
+          <button id="close-warning" class="btn-confirm">
+            <i class="fa-solid fa-check"></i> I Understand
+          </button>
         </div>
       </div>
     </div>
