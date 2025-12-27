@@ -119,6 +119,11 @@ p {
   transition: all 0.3s ease;
 }
 
+.back-button:hover {
+  background-color: #3a3a9d;
+  transform: scale(1.05);
+}
+
 @media (max-width: 670px) {
   .score-container {
     width: 100%;
@@ -130,5 +135,17 @@ p {
     width: 100%;
     display: flex;
     gap: 30px;
+  }
+
+  .answers-contianer {
+    flex-direction: column;
+  }
+
+  .correct-answers {
+    width: 100%;
+  }
+
+  .wrong-answers {
+    width: 100%;
   }
 }
