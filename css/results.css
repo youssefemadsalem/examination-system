@@ -44,6 +44,22 @@ body {
   height: 50px;
 }
 
+.examicon2 {
+  width: 79px;
+  height: 79px;
+  background-color: rgb(202, 251, 212);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.examicon2 svg {
+  color: green;
+  width: 50px;
+  height: 50px;
+}
+
 h3 {
   font-size: 2rem;
 }

@@ -166,13 +166,7 @@ registerBtn.addEventListener("click", function (e) {
       password: passwordInput.value,
     };
 
-    var registeredUser = JSON.parse(localStorage.getItem("user"));
-    if (registeredUser.email == user.email) {
-      showError(emailInput, emailError, "email is already exist");
-      isValid = false;
-    } else {
-      Storage.saveUser(user);
-      window.location.href = "../pages/login.html";
-    }
+    Storage.saveUser(user);
+    window.location.href = "../pages/login.html";
   }
 });

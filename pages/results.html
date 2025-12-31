@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../assets/libs/fontawesome/css/all.min.css" />
     <script src="../js/utils/storage.js" defer></script>
     <script src="../js/utils/validation.js" defer></script>
-    <script src="../js/registration.js" defer></script>
+    <script src="../js/utils/Auth.js" defer></script>
+    <script src="../js/results.js" defer></script>
   </head>
   <body>
     <div class="result-container">
@@ -35,9 +36,25 @@
           <path d="m9 9 6 6"></path>
         </svg>
       </div>
+      <div class="examicon2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class=""
+        >
+          <path d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
       <h3>Exam completed</h3>
       <p>
-        <span class="username">youssef emad</span> you have successfully
+        <span class="username" id="user-name"></span> you have successfully
         submitted your examination
       </p>
 
@@ -75,7 +92,7 @@
           again
         </p>
       </div>
-      <button class="back-button">back to sign in</button>
+      <button class="back-button">back to home</button>
     </div>
   </body>
 </html>
