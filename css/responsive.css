@@ -1,0 +1,307 @@
+/* Responsive Styles for Mobile Devices */
+
+@media (max-width: 992px) {
+  .content {
+    width: 85%;
+    padding: 40px 40px;
+    margin: 50px auto;
+  }
+
+  .instructions {
+    width: 85%;
+    padding: 30px 35px;
+  }
+
+  .notes {
+    width: 85%;
+  }
+
+  .welcome-message h1 {
+    font-size: 30px;
+  }
+
+  .welcome-message p {
+    font-size: 20px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar h1 {
+    font-size: 18px;
+  }
+
+  .logo {
+    gap: 10px;
+  }
+
+  .logo i {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .logout-button {
+    font-size: 16px;
+    gap: 5px;
+  }
+
+  .content {
+    width: 92%;
+    padding: 30px 20px;
+    margin: 30px auto;
+  }
+
+  .welcome-message h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .welcome-message p {
+    font-size: 16px;
+  }
+
+  .exam-info {
+    padding: 20px 15px;
+  }
+
+  .exam-info h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .exam-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-card {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .icon-box {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+  }
+
+  .icon-box i {
+    font-size: 22px;
+  }
+
+  .info-value {
+    font-size: 18px;
+  }
+
+  .info-label {
+    font-size: 14px;
+  }
+
+  .info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .instructions {
+    width: 92%;
+    padding: 25px 20px;
+    margin: 30px auto;
+  }
+
+  .instructions h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .instructions li {
+    font-size: 16px;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .instructions li::before {
+    font-size: 16px;
+    min-width: 28px;
+    height: 28px;
+  }
+
+  .notes {
+    width: 92%;
+    padding: 20px;
+    margin: 20px auto 30px auto;
+  }
+
+  .notes h3 {
+    font-size: 20px;
+    gap: 10px;
+  }
+
+  .notes li {
+    font-size: 15px;
+  }
+
+  .start-exam {
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+  }
+
+  .start-button {
+    padding: 18px 30px;
+    font-size: 20px;
+    border-radius: 12px;
+  }
+
+  .start-exam span {
+    font-size: 16px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 15px;
+  }
+
+  .navbar h1 {
+    font-size: 14px;
+  }
+
+  .logo i {
+    font-size: 14px;
+    padding: 6px;
+    border-radius: 5px;
+  }
+
+  .logout-button {
+    font-size: 14px;
+  }
+
+  .logout-button span {
+    display: none;
+  }
+
+  .content {
+    width: 95%;
+    padding: 25px 15px;
+    margin: 20px auto;
+    border-radius: 12px;
+  }
+
+  .welcome-message {
+    margin-bottom: 20px;
+  }
+
+  .welcome-message h1 {
+    font-size: 20px;
+  }
+
+  .welcome-message p {
+    font-size: 14px;
+  }
+
+  .exam-info {
+    padding: 15px 10px;
+    border-radius: 10px;
+  }
+
+  .exam-info h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .info-card {
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .icon-box {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-box i {
+    font-size: 20px;
+  }
+
+  .info-value {
+    font-size: 16px;
+  }
+
+  .info-label {
+    font-size: 13px;
+  }
+
+  .instructions {
+    width: 95%;
+    padding: 20px 15px;
+    margin: 20px auto;
+    border-radius: 12px;
+  }
+
+  .instructions h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .instructions li {
+    font-size: 14px;
+    gap: 12px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+  }
+
+  .instructions li::before {
+    font-size: 14px;
+    min-width: 24px;
+    height: 24px;
+    margin-top: 2px;
+  }
+
+  .notes {
+    width: 95%;
+    padding: 15px;
+    margin: 15px auto 25px auto;
+    border-radius: 10px;
+  }
+
+  .notes h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .notes li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .start-exam {
+    margin: 0 auto 40px auto;
+    padding: 0 15px;
+  }
+
+  .start-button {
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .start-exam span {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+

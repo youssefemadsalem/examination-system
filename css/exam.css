@@ -635,3 +635,10 @@ body {
   background-color: #3a3ac1;
 }
 
+@media (max-width: 500px) {
+  .action-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+

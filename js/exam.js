@@ -30,6 +30,12 @@ var modalMarked = document.getElementById("modal-marked");
 // Ensure user is logged in, redirect to login page if not
 Auth.requireLogin("../pages/login.html");
 
+// Check if exam was completed (user is trying to go back from results)
+if (sessionStorage.getItem("examCompleted") === "true") {
+  // Exam was completed, redirect to index
+  window.location.replace("../index.html");
+}
+
 // ============== EXAM PROTECTION ==============
 
 // Flag to track if exam is in progress

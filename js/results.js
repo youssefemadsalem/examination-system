@@ -10,6 +10,25 @@ if (user && user.firstName) {
   userNameDisplay.textContent = "Guest";
 }
 
+// Clear exam session data to prevent returning to exam
+sessionStorage.removeItem("examInProgress");
+sessionStorage.removeItem("userAnswers");
+sessionStorage.removeItem("markedQuestions");
+sessionStorage.removeItem("currentQuestionIndex");
+sessionStorage.removeItem("timeLeft");
+
+// Mark that exam was completed
+sessionStorage.setItem("examCompleted", "true");
+
+// Prevent going back to exam page - push multiple states to override exam history
+history.pushState(null, null, location.href);
+
+window.addEventListener("popstate", function() {
+  // Always redirect to index when trying to go back
+  history.pushState(null, null, location.href);
+  window.location.replace("../index.html");
+});
+
 backbutton.addEventListener("click", function () {
   window.location.href = "../index.html";
 });
@@ -60,7 +79,7 @@ if (examResults) {
   percentageDiv.textContent = `${examResults.percentage}%`;
 
   // حساب الدرجة
-  let grade = "";
+  let grade;
   if (examResults.percentage >= 90) grade = "A+";
   else if (examResults.percentage >= 80) grade = "A";
   else if (examResults.percentage >= 70) grade = "B";

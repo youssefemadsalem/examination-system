@@ -8,6 +8,9 @@ console.log("User Name Display found:", userNameDisplay);
 // Check if user is logged in, redirect to log in if not (use correct path from root)
 Auth.requireLogin("pages/login.html");
 
+// handle exam complete flag with false before starting new exam
+sessionStorage.setItem("examCompleted", "false");
+
 // handle back button navigation
 window.addEventListener("pageshow", function () {
   if (!Auth.isLoggedIn()) {
