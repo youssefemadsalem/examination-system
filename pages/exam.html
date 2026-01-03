@@ -28,11 +28,20 @@
         <div class="timer-header">
           <div class="top">
             <h1>Welcome, <span></span></h1>
-            <p>Question <span id="question-number">1</span> of <span id="total-questions">10</span></p>
+            <p>
+              Question <span id="question-number">1</span> of
+              <span id="total-questions">10</span>
+            </p>
           </div>
           <div class="right-side">
             <div class="answered-count">
-                <div>Answered <span><span id="solved-count">0</span> / <span id="all-questions">10</span></span> </div>
+              <div>
+                Answered
+                <span
+                  ><span id="solved-count">0</span> /
+                  <span id="all-questions">10</span></span
+                >
+              </div>
             </div>
             <div class="time-remaining">
               <i class="fa-solid fa-clock"></i>
@@ -127,9 +136,18 @@
         <div class="modal-body">
           <p>Are you sure you want to submit your exam?</p>
           <div class="exam-summary">
-            <p><strong>Answered:</strong> <span id="modal-answered">0</span> questions</p>
-            <p><strong>Unanswered:</strong> <span id="modal-unanswered">0</span> questions</p>
-            <p><strong>Marked for review:</strong> <span id="modal-marked">0</span> questions</p>
+            <p>
+              <strong>Answered:</strong>
+              <span id="modal-answered">0</span> questions
+            </p>
+            <p>
+              <strong>Unanswered:</strong>
+              <span id="modal-unanswered">0</span> questions
+            </p>
+            <p>
+              <strong>Marked for review:</strong>
+              <span id="modal-marked">0</span> questions
+            </p>
           </div>
         </div>
         <div class="modal-actions">
@@ -151,7 +169,10 @@
           <h2>Warning!</h2>
         </div>
         <div class="modal-body">
-          <p>You cannot leave the exam page. Your progress will be lost if you try to navigate away.</p>
+          <p>
+            You cannot leave the exam page. Your progress will be lost if you
+            try to navigate away.
+          </p>
         </div>
         <div class="modal-actions">
           <button id="close-warning" class="btn-confirm">
@@ -161,22 +182,22 @@
       </div>
     </div>
 
-<!--  Time's Up Modal -->
-  <div id="times-up-modal" class="modal hidden">
-    <div class="modal-content">
-      <div class="modal-header">
-        <i class="fa-solid fa-clock" style="color: red"></i>
-        <h2>Time's Up!</h2>
-      </div>
-      <div class="modal-body">
-        <p>Your time is up! Please submit your exam.</p>
-      </div>
-      <div class="modal-actions">
-        <button id="close-times-up" class="btn-confirm">
-          <i class="fa-solid fa-check"></i> Okay
-        </button>
+    <!--  Time's Up Modal -->
+    <div id="times-up-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <i class="fa-solid fa-clock" style="color: red"></i>
+          <h2>Time's Up!</h2>
+        </div>
+        <div class="modal-body">
+          <p>Your time is up! Please submit your exam.</p>
+        </div>
+        <div class="modal-actions">
+          <button id="close-times-up" class="btn-confirm">
+            <i class="fa-solid fa-check"></i> Okay
+          </button>
+        </div>
       </div>
     </div>
-  </div>
   </body>
 </html>

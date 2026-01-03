@@ -16,83 +16,89 @@
     <script src="../js/results.js" defer></script>
   </head>
   <body>
-    <div class="result-container">
-      <div class="examicon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class=""
-          data-fg-cwqy7="1.84:1.5045:/src/app/components/ResultsPage.tsx:44:17:1581:46:e:XCircle::::::ClFn"
-        >
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="m15 9-6 6"></path>
-          <path d="m9 9 6 6"></path>
-        </svg>
-      </div>
-      <div class="examicon2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class=""
-        >
-          <path d="M5 13l4 4L19 7"></path>
-        </svg>
-      </div>
-      <h3>Exam completed</h3>
-      <p>
-        <span class="username" id="user-name"></span> you have successfully
-        submitted your examination
-      </p>
-
-      <div class="score-container">
-        <div>
-          <p>score</p>
-          <h3>1/10</h3>
+    <div class="main-container">
+      <div class="result-container">
+        <div class="examicon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class=""
+            data-fg-cwqy7="1.84:1.5045:/src/app/components/ResultsPage.tsx:44:17:1581:46:e:XCircle::::::ClFn"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="m15 9-6 6"></path>
+            <path d="m9 9 6 6"></path>
+          </svg>
         </div>
-        <div>
-          <p>percentage</p>
-          <h3>10%</h3>
+        <div class="examicon2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class=""
+          >
+            <path d="M5 13l4 4L19 7"></path>
+          </svg>
         </div>
-        <div>
-          <p>Grade</p>
-          <h3>F</h3>
-        </div>
-        <div>
-          <p>Status</p>
-          <h3>Failed</h3>
-        </div>
-      </div>
-      <div class="answers-contianer">
-        <div class="correct-answers">
-          <p>correct Answers</p>
-          <h3>1</h3>
-        </div>
-        <div class="wrong-answers">
-          <p>Wrong Answers</p>
-          <h3>9</h3>
-        </div>
-      </div>
-      <div class="try-again">
+        <h3>Exam completed</h3>
         <p>
-          you need at least 50% to pass . please review the material and try
-          again
+          <span class="username" id="user-name"></span> you have successfully
+          submitted your examination
         </p>
+
+        <div class="score-container">
+          <div>
+            <p>score</p>
+            <h3>1/10</h3>
+          </div>
+          <div>
+            <p>percentage</p>
+            <h3>10%</h3>
+          </div>
+          <div>
+            <p>Grade</p>
+            <h3>F</h3>
+          </div>
+          <div>
+            <p>Status</p>
+            <h3>Failed</h3>
+          </div>
+        </div>
+        <div class="answers-contianer">
+          <div class="correct-answers">
+            <p>correct Answers</p>
+            <h3>1</h3>
+          </div>
+          <div class="wrong-answers">
+            <p>Wrong Answers</p>
+            <h3>9</h3>
+          </div>
+        </div>
+        <div class="try-again">
+          <p>
+            you need at least 50% to pass . please review the material and try
+            again
+          </p>
+        </div>
+        <button class="back-button">Back To sign in</button>
       </div>
-      <button class="back-button">Back To Home</button>
+      <div class="review-container">
+        <h3>Review Questions</h3>
+        <div id="review-questions"></div>
+      </div>
     </div>
   </body>
 </html>

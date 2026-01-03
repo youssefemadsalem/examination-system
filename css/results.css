@@ -13,6 +13,13 @@ body {
   align-items: center;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .result-container {
   width: 900px;
   margin: 30px auto;
@@ -138,6 +145,66 @@ p {
 .back-button:hover {
   background-color: #3a3a9d;
   transform: scale(1.05);
+}
+
+.review-container {
+  width: 900px;
+  background-color: #f9f9ff;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.review-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.review-question {
+  margin-bottom: 20px;
+}
+
+.review-question p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.review-answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-answer {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.review-answer.correct {
+  background-color: rgb(203, 255, 203);
+  border-color: green;
+  color: green;
+}
+
+.review-answer.wrong {
+  background-color: rgb(255, 185, 185);
+  border-color: red;
+  color: red;
+}
+
+@media (max-width: 900px) {
+  .result-container,
+  .review-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .score-container {
+    gap: 30px;
+  }
 }
 
 @media (max-width: 670px) {

@@ -10,7 +10,6 @@ if (user && user.firstName) {
   userNameDisplay.textContent = "Guest";
 }
 
-
 // Clear exam session data to prevent returning to exam
 sessionStorage.removeItem("examInProgress");
 sessionStorage.removeItem("userAnswers");
@@ -103,3 +102,41 @@ const wrongCount = examResults.wrongAnswers.length; // wrong ans count
 
 correctDiv.textContent = correctCount;
 wrongDiv.textContent = wrongCount;
+
+// ================= Review Questions =================
+const reviewContainer = document.getElementById("review-questions");
+
+if (examResults && examResults.questions) {
+  examResults.questions.forEach((question, qIndex) => {
+    const questionDiv = document.createElement("div");
+    questionDiv.className = "review-question";
+
+    const questionTitle = document.createElement("p");
+    questionTitle.textContent = `${qIndex + 1}. ${question.question}`;
+    questionDiv.appendChild(questionTitle);
+
+    const answersDiv = document.createElement("div");
+    answersDiv.className = "review-answers";
+
+    question.answers.forEach((answer, aIndex) => {
+      const answerDiv = document.createElement("div");
+      answerDiv.className = "review-answer";
+      answerDiv.textContent = answer.answer;
+
+      // correct answer
+      if (answer.isCorrect) {
+        answerDiv.classList.add("correct");
+      }
+
+      // wrong selected answer
+      if (examResults.userAnswers[qIndex] === aIndex && !answer.isCorrect) {
+        answerDiv.classList.add("wrong");
+      }
+
+      answersDiv.appendChild(answerDiv);
+    });
+
+    questionDiv.appendChild(answersDiv);
+    reviewContainer.appendChild(questionDiv);
+  });
+}
