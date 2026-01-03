@@ -27,6 +27,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: -20px;
+  padding-top: 10px;
 }
 
 .timer-header .top {
@@ -197,14 +198,14 @@ body {
 .questions-grid {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: repeat(5, 70px);
+  grid-template-columns: repeat(5, 60px);
   gap: 10px;
   justify-content: center;
 }
 
 .questions-grid .question {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-color: #e0e0e0;
   border-radius: 10px;
   text-align: center;
@@ -644,9 +645,11 @@ body {
   background-color: #3a3ac1;
 }
 
+
 @media (max-width: 590px) {
   .action-buttons {
     flex-direction: column;
     gap: 15px;
   }
 }
+

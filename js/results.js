@@ -118,6 +118,17 @@ if (examResults && examResults.questions) {
     const answersDiv = document.createElement("div");
     answersDiv.className = "review-answers";
 
+    // Check if user didn't answer this question
+    const userAnswer = examResults.userAnswers[qIndex];
+    const isUnanswered = userAnswer === undefined || userAnswer === null || userAnswer === -1;
+
+    if (isUnanswered) {
+      const unansweredSign = document.createElement("span");
+      unansweredSign.className = "unanswered-sign";
+      unansweredSign.textContent = " (Not Answered)";
+      questionTitle.appendChild(unansweredSign);
+    }
+
     question.answers.forEach((answer, aIndex) => {
       const answerDiv = document.createElement("div");
       answerDiv.className = "review-answer";
@@ -132,6 +143,7 @@ if (examResults && examResults.questions) {
       if (examResults.userAnswers[qIndex] === aIndex && !answer.isCorrect) {
         answerDiv.classList.add("wrong");
       }
+
 
       answersDiv.appendChild(answerDiv);
     });

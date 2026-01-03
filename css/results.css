@@ -195,6 +195,18 @@ p {
   color: red;
 }
 
+.review-answer.not-answered {
+    background-color: #f0f0f0;
+    border-color: #999;
+    color: #666;
+}
+
+.unanswered-sign {
+    color: #f59e0b;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
 @media (max-width: 900px) {
   .result-container,
   .review-container {
