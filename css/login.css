@@ -19,6 +19,7 @@ body {
   border-radius: 15px;
   background-color: white;
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in;
 }
 
 .header {
@@ -137,4 +138,13 @@ input.success {
 }
 .footer a:hover {
   text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

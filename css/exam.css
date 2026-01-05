@@ -4,8 +4,7 @@ body {
 }
 
 .parent {
-  margin: 50px;
-  padding: 15px;
+  margin: 0px 50px 0px 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
@@ -223,11 +222,13 @@ body {
 .questions-grid .question.answered {
   background-color: #238e3a;
   color: #d4edda;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .questions-grid .question.marked {
   background-color: #f6b50e;
   color: #fff3cd;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .questions-grid .question.not-answered {
@@ -238,6 +239,7 @@ body {
 .questions-grid .question.current {
   border: 3px solid #4b4bdd;
   background-color: white;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .questions-stats {
@@ -320,6 +322,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .options-list .option {
@@ -334,6 +337,7 @@ body {
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .options-list .option:hover {
@@ -346,6 +350,7 @@ body {
   background-color: #e3f2fd;
   border-color: #4b4bdd;
   box-shadow: 0 4px 12px rgba(75, 75, 221, 0.2);
+  animation: fadeIn 0.5s ease-in;
 }
 
 .option input[type="radio"] {
@@ -358,6 +363,7 @@ body {
   align-items: center;
   width: 100%;
   font-weight: 500;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .option .option-letter {
@@ -374,6 +380,7 @@ body {
   margin-right: 15px;
   flex-shrink: 0;
   transition: all 0.2s ease;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .option.selected .option-letter {
@@ -465,7 +472,7 @@ body {
   transition: color 0.2s ease;
 }
 
-@media (max-width: 935px) {
+@media (max-width: 980px) {
   .parent {
     grid-template-columns: 1fr;
     justify-content: center;
@@ -530,7 +537,6 @@ body {
   width: 90%;
   animation: modalSlideIn 0.3s ease;
 }
-
 
 @keyframes modalSlideIn {
   from {
@@ -645,7 +651,6 @@ body {
   background-color: #3a3ac1;
 }
 
-
 @media (max-width: 590px) {
   .action-buttons {
     flex-direction: column;
@@ -653,7 +658,7 @@ body {
   }
 
   .questions-grid {
-    grid-template-columns: repeat(5 , 50px);
+    grid-template-columns: repeat(5, 50px);
   }
 
   .questions-grid .question {
@@ -662,3 +667,11 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

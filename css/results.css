@@ -21,6 +21,8 @@ body {
 }
 
 .result-container {
+  animation: fadeIn 0.5s ease-in;
+
   width: 900px;
   margin: 30px auto;
   padding: 25px;
@@ -128,6 +130,7 @@ p {
 }
 
 .back-button {
+  align-self: center;
   background-color: #4b4bdd;
   color: white;
   border: none;
@@ -148,6 +151,8 @@ p {
 }
 
 .review-container {
+  display: flex;
+  flex-direction: column;
   width: 900px;
   background-color: #f9f9ff;
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
@@ -196,15 +201,15 @@ p {
 }
 
 .review-answer.not-answered {
-    background-color: #f0f0f0;
-    border-color: #999;
-    color: #666;
+  background-color: #f0f0f0;
+  border-color: #999;
+  color: #666;
 }
 
 .unanswered-sign {
-    color: #f59e0b;
-    font-weight: bold;
-    font-size: 0.9rem;
+  color: #f59e0b;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 900px) {
@@ -242,5 +247,68 @@ p {
 
   .wrong-answers {
     width: 100%;
+  }
+}
+
+@keyframes scroll_1 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-0.6em);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(0.6em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-icon__wheel-outer {
+  position: absolute;
+  left: 50%;
+  top: 0.6em;
+  height: 1em;
+  width: 0.4em;
+  margin-left: -0.2em;
+  border-radius: 0.4em;
+  overflow: hidden;
+}
+
+.scroll-icon {
+  display: block;
+  position: relative;
+  height: 3em;
+  width: 1.5em;
+  border: 0.25em solid #000000;
+  border-radius: 1em;
+}
+
+.scroll-icon__wheel-inner {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: #000000;
+  animation: scroll_1 2.75s ease-in-out infinite;
+}
+.example {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
